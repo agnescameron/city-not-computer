@@ -42,7 +42,7 @@ color: #F1BA93;
 
 .textwrapper {
   width: 90%;
-  padding: 20px 20px 20px;
+  padding: 30px 30px 30px;
 }
 
 /*headings in fatface*/
@@ -51,8 +51,8 @@ h2 { font-family: "Abril Fatface"; font-size: 24px; font-style: normal; font-var
 h3 { font-family: "Abril Fatface"; font-size: 14px; font-style: normal; font-variant: normal; font-weight: bold; line-height: 15px; } 
 
 /*paragraphs in source sans*/
-p { font-family: 'Source Sans Pro', sans-serif; font-size: 20px; font-style: normal; font-variant: normal; font-weight: 300; line-height: 20px; } 
-.p2 { font-family: 'Source Sans Pro', sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 300; line-height: 20px; } 
+p { text-align:justify; font-family: 'Source Sans Pro', sans-serif; font-size: 20px; font-style: normal; font-variant: normal; font-weight: 300; line-height: 20px; padding-bottom: 40px;} 
+.p2 { text-align:justify; font-family: 'Source Sans Pro', sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 300; line-height: 20px; padding-bottom: 40px;} 
 
 
 #title {
