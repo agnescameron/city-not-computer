@@ -43,7 +43,7 @@ function init(){
 	function drawGrid() { //draw the contents of the grid onto a canvas
     var liveCount = 0;
     var blockSize = 20;
-    ctx.fillStyle = "#F1BA93";
+    ctx.fillStyle = "white";
 	    ctx.clearRect(0, 0, gridHeight*blockSize, gridWidth*blockSize); //this should clear the canvas ahead of each redraw
 	    for (var j = 0; j < gridHeight; j++) { //iterate through rows
 	        for (var k = 0; k < gridWidth; k++) { //iterate through columns
