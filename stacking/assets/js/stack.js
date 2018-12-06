@@ -1,6 +1,16 @@
 (function() {
     document.onmousemove = handleMouseMove;
-    
+
+
+    function showEssay1() {
+        var x = document.getElementById("essay1");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+    }
+
     function moveSvg(svg) {
         console.log(`moving frame${svg}`);
         var frame = document.getElementById(`frame${svg}`)
