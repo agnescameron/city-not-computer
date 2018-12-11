@@ -23,8 +23,7 @@ color: #555;
 }
 
 .textbox {
-  width: 700px;
-  height: 1000px;
+  width: 800px;
   z-index: 2;
   border: 2px solid #F1BA93;
   position: absolute;
@@ -80,9 +79,8 @@ p { text-align:justify; font-family: 'Source Sans Pro', sans-serif; font-size: 2
     text-decoration:none;
 }
 
-canvas-container{
+#canvas-container{
     width:900;
-    height:540;
 }
 
 canvas {

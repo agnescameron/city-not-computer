@@ -4,8 +4,8 @@
 
 function init(){
         // Load the script
-	    var gridHeight = 75;
-	    var gridWidth = 75;
+	    var gridHeight = 500;
+	    var gridWidth = 500;
 	    var theGrid = createArray(gridWidth);
 	    var numArray = createArray(gridWidth);
 	    var mirrorGrid = createArray(gridWidth);
