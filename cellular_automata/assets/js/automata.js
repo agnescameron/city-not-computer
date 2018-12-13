@@ -111,6 +111,6 @@ function init(){
 	    mirrorGrid = temp;
 
     
-	}
+		}
     }
 window.onload = init;
