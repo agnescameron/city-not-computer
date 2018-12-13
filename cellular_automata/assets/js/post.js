@@ -64,3 +64,11 @@ $(function() {
 
     $("ul").sortable();
 });
+
+$('#essay0').scroll(function(){
+  if ((this).scrollTop>50) {
+    $('#menu-icon').fadeOut();
+  } else {
+    $('#menu-icon').fadeIn();
+  }
+});
