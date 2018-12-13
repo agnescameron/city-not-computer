@@ -111,15 +111,15 @@ function mid_game(canvasID){
     }
 
 
-function getImages(folder){
-	var img;
-	for(var i=1; i<10; i++){
-		img.src = `assets/img/${folder}/${i}.jpg`;
-		console.log(img);
-		if (img === 'undefined') break;
-		else console.log(i)
-	}
-}
+// function getImages(folder){
+// 	var img;
+// 	for(var i=1; i<10; i++){
+// 		img.src = `assets/img/${folder}/${i}.jpg`;
+// 		console.log(img);
+// 		if (img === 'undefined') break;
+// 		else console.log(i)
+// 	}
+// }
 
 function readTextFile(file)
 {	
@@ -143,7 +143,7 @@ function readTextFile(file)
 
 function showEssay(number) {
 	readTextFile(`assets/essays/${number}.html`);
-	getImages(number);	
+	// getImages(number);	
 	var x = document.getElementById("essay");
 	if (x.style.display === "none") {
 		x.style.display = "block";
