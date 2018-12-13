@@ -66,9 +66,10 @@ $(function() {
 });
 
 $('#essay0').scroll(function(){
-  if ((this).scrollTop>50) {
+  point1 = $('#canvas1_02').offset().top;
+  if ((this).scrollTop>point1) {
     $('#menu-icon').fadeOut();
-  } else {
+  } else   {
     $('#menu-icon').fadeIn();
   }
 });
