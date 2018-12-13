@@ -54,10 +54,6 @@ color: #555;
   left:0;
   padding:10% 10% 0 20px;
 }
-.menu:hover {
-  z-index:5000;
-  background-image: linear-gradient(to right, rgba(255,255,255,1) , rgba(255,255,255,0));
-}
 .menu h2 {
   cursor: grab;
   line-height: 1.5;
@@ -239,8 +235,32 @@ float: left;
     transition: 250ms all;
     transition-timing-function: ease-in;
   }
-  #menu-icon:hover {
+  #menu-icon:hover, #menu-icon.active {
     right:-50px;
     bottom:-50px;
+  }
+  #menu {
+    position:fixed;
+    width:calc(100%-20px);
+    height:calc(100%-20px);
+    top:0;
+    left:0;
+    background-color: rgba(241,186,147,0.9);
+    z-index:499;
+    padding:10px;
+    margin:0;
+  }
+  #menu h2 {
+    font-size:14px;
+    line-height: 1.2;
+    color:white;
+    text-align: center;
+    font-family: 'Nunito';
+    font-weight: 700;
+
+  }
+  #menu h2 span {
+    font-size: 14px;
+    display: none;
   }
 }

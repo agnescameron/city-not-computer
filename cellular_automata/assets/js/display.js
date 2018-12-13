@@ -2,9 +2,11 @@
 function toggleMenu(){
 	var menu = document.getElementById('menu');
 	if (menu.style.display === "none") {
-		menu.style.display = "block";						
+		menu.style.display = "block";
+        $('#menu-icon').addClass('active');						
 	} else {
 		menu.style.display = "none";
+        $('#menu-icon').removeClass('active');
 	}
 }
 

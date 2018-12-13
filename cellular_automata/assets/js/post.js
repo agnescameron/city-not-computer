@@ -73,3 +73,14 @@ $('#essay0').scroll(function(){
     $('#menu-icon').fadeIn();
   }
 });
+if( $('#title').css('font-size')=='30px') {
+    var is_mobile = true;
+}
+if (is_mobile == true) {
+    function showEssay(number) {
+      var selectEssay = "#essay" + number;
+      $('.textbox').fadeOut();
+      $(selectEssay).fadeIn();
+      toggleMenu();
+  }
+}
