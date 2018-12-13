@@ -1,7 +1,7 @@
 
 function readTextFile(file)
 {	
-    var rawFile = new XMLHttpRequest();
+    rawFile = new XMLHttpRequest();
     rawFile.open("GET", file, false);
     rawFile.onreadystatechange = function ()
     {
@@ -18,14 +18,18 @@ function readTextFile(file)
     rawFile.send(null);
 }
 
-
+$(document).ready (function() {
+    $('.essay').each( function(index){
+        readTextFile(`assets/essays/${index}.html`);
+        essayNum = "essay" + index;
+        var x = document.getElementById(essayNum);
+        x.innerHTML = rawFile.responseText;
+        dragElement(document.getElementById(essayNum));
+    });
+});
 function showEssay(number) {
-	readTextFile(`assets/essays/${number}.html`);
-	var x = document.getElementById("essay");
-	if (x.style.display === "none") {
-		x.style.display = "block";
-		x.innerHTML = rawFile.responseText;
-	} else {
-		x.style.display = "none";
-	}
+    var selectEssay = "#essay" + number;
+    $(selectEssay).removeClass('hidden');
+    $(selectEssay).css('z-index', zindex);
+    zindex +=1;
 }
