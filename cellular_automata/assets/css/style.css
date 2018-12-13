@@ -48,6 +48,7 @@ color: #555;
 .menu {
   position: fixed;
   height:100%;
+  display:none;
   z-index: 1;
   top:0;
   left:0;
@@ -124,60 +125,14 @@ canvas {
   padding: 30px;
 }
 
-#footer {
-  font: bold 40px/34px "Helvetica", "Arial", sans-serif;
-  letter-spacing: -2px;
-  margin: 0 0 0 0;
-  padding: 6px 6px 8px;
-}
 
-
-#footer a {
-  text-decoration: none;
-  color: #222;
-}
-
-#imgBlock {
-    display: inline-block;
-    position: relative;
-    padding: 30px 0 30px 0;
-
-}
-
-
-#smallimg {
-    height: 135px;
-    display: inline-block;
-    margin: 15px 20px 15px 0;
-
-}
-
-#bigimg {
-    height: 435px;
-    display: inline-block;
-    margin: 15px 20px 15px 0;
-
-}
-
-#verybigimg {
-    height: 535px;
-    display: inline-block;
-    margin: 15px 40px 15px 40px;
-
-}
-
-#medimg {
-    height: 335px;
-    display: inline-block;
-    margin: 15px 20px 15px 0;
-
-}
-
-
-img {
-    display: inline-block;
-    height: 230px;
-    margin: 15px 20px 15px 0;
+#menu-icon {
+  width:100px;
+  height:100px;
+  position:fixed;
+  right:50px;
+  bottom:50px;
+  background-image: url('../img/window.svg');
 }
 
 #textbox {

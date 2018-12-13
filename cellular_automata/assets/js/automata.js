@@ -15,10 +15,8 @@ function renderCanvas(canvasID){
 	//functions
 	function tick() { //main loop
 	   var tickTime = 3000; // pause between iterations
-	   console.time("loop");
 	   drawGrid();
 	   updateGrid();
-	   console.timeEnd("loop");
 	   setTimeout(function() {requestAnimationFrame(tick)}, tickTime);
 	}
 
@@ -127,10 +125,8 @@ function init(){
 	//functions
 	function tick() { //main loop
 	    var tickTime = 1500; // pause between iterations
-	    console.time("loop");
 	    drawGrid();
 	    updateGrid();
-	    console.timeEnd("loop");
 	    setTimeout(function() {requestAnimationFrame(tick)}, tickTime);
 	}
 
