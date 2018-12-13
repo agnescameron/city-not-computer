@@ -118,6 +118,11 @@ canvas {
  width:100%;
 }
 
+.autoCanvasContainer {
+  width: 600px;
+  height: 150px;
+  padding: 30px;
+}
 
 #footer {
   font: bold 40px/34px "Helvetica", "Arial", sans-serif;
