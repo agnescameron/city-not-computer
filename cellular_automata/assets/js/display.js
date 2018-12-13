@@ -25,6 +25,12 @@ $(document).ready (function() {
         var x = document.getElementById(essayNum);
         x.innerHTML = rawFile.responseText;
         dragElement(document.getElementById(essayNum));
+        autoCanvas = '#' + essayNum + ' .autoCanvas';
+        $(autoCanvas).each( function(){
+            id = (this).id;
+            renderCanvas(id);
+
+        });
     });
 });
 function showEssay(number) {
