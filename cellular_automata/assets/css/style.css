@@ -191,3 +191,56 @@ float: left;
 .red {
   box-shadow: 2px 2px 2px red;
 }
+
+@media screen and (max-width:768px) {
+  body {
+    margin:0;
+    padding:0;
+  }
+  #title {
+    font-size:30px;
+    text-align: center;
+    position: fixed;
+    width:100%;
+    top:0;
+    left:0;
+  }
+  .textbox {
+    width:94%;
+    position: relative;
+    margin:100px 0 0 -2px;
+    padding:10px;
+    overflow: hidden;
+    height:auto;
+  }
+  #essay0, #essay1, #essay2, #essay3,
+  #essay4,
+  #essay5 {
+    top:0;
+    left:0;
+  }
+  document h1 {
+    font-size:30px;
+    line-height: 1;
+    text-align: center;
+    margin:10px;
+  }
+  document p {
+    font-size:14px;
+  }
+  document canvas {
+    margin-left:-25%; 
+  }
+  #menu-icon {
+    z-index:500;
+    position: fixed;
+    right:-120px;
+    bottom:-120px;
+    transition: 250ms all;
+    transition-timing-function: ease-in;
+  }
+  #menu-icon:hover {
+    right:-50px;
+    bottom:-50px;
+  }
+}
