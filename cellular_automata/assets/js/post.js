@@ -62,7 +62,6 @@ $(function() {
         }
     });
 
-    $("ul").sortable();
 });
 
 $('#essay0').scroll(function(){

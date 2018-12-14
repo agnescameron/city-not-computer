@@ -22,9 +22,7 @@ function readTextFile(file)
         {
             if(rawFile.status === 200 || rawFile.status == 0)
             {
-                rawFile.responseText;
-				var wrap = document.getElementById("essayWrapper");
-			    wrap.innerHTML = rawFile.responseText;           
+                rawFile.responseText;        
             }
         }
     }
