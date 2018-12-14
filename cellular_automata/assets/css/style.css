@@ -48,15 +48,22 @@ color: #555;
 .menu {
   position: fixed;
   height:100%;
+  width:100%;
   display:none;
-  z-index: 1;
+  z-index: 500;
   top:0;
-  left:0;
-  padding:10% 10% 0 20px;
+  right:0;
+  text-align: center;
+  background-color: rgba(241,186,147,0.9);
+  border:2px solid #F1BA93;
 }
 .menu h2 {
   cursor: grab;
   line-height: 1.5;
+  color:white;
+  font-family: 'Nunito', sans-serif;
+  font-weight:bold;
+  margin:40px 0;
 }
 .menu h2 span {
   font-size: 40px;
@@ -126,11 +133,26 @@ canvas {
   width:200px;
   height:200px;
   position:fixed;
-  right:10px;
-  bottom:10px;
+  right:-120px;
+  bottom:-120px;
   background-image: url('../img/HELP.png');
   background-size: contain;
   background-repeat: no-repeat;
+  z-index:500;
+  font-size: 36px;
+  font-weight:bold;
+  transition:250ms;
+ 
+}
+#menu-icon::before{ 
+ content:"?";
+ }
+#menu-icon.active {
+  right:-50px;
+  bottom:-50px;
+}
+#menu-icon.active::before {
+    content: "X";
 }
 
 #textbox {
@@ -142,6 +164,9 @@ float: left;
   height:80vh;
   overflow-y: scroll;
   position: absolute;
+}
+.tempTransition {
+  transition: 500ms all;
 }
 #essay0 {
   left:10%;
