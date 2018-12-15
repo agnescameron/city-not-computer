@@ -16,6 +16,7 @@ color: #555;
   opacity:0.25;
 }
 
+
 #wrapper {
   width: 100%;
   height: 100%;
@@ -81,7 +82,7 @@ h3 { font-family: 'Cormorant', serif; font-size: 14px; font-style: normal; font-
 
 /*paragraphs in source sans*/
 p { text-align:justify; font-family: 'Nunito', sans-serif; font-size: 20px; font-style: normal; font-variant: normal; font-weight: 300; line-height: 1.4; padding-bottom: 40px;} 
-.p2 { text-align:justify; font-family: 'Nunito', sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 300; line-height: 20px; padding-bottom: 40px;} 
+.quote { width: 400px; float: right; text-align:right; font-family: 'Nunito', sans-serif; font-size: 20px; font-style: normal; font-variant: normal; font-weight: 300; line-height: 20px; padding-bottom: 40px; padding-left:200px;} 
 
 
 #title {
@@ -186,6 +187,21 @@ float: left;
 }
 .red {
   box-shadow: 2px 2px 2px red;
+}
+
+#img2{
+  background-image: url("../img/contour.png");
+  width: 400px;
+  height: 400px;
+  z-index: 100;
+  float: right;
+}
+
+#img1{
+  background-image: url("../img/HELP.png");
+  width: 400px;
+  z-index: 100;
+  float: right;
 }
 
 @media screen and (max-width:768px) {

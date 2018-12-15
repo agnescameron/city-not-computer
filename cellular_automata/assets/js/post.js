@@ -67,12 +67,23 @@ $(function() {
 
 $('#essay0').scroll(function(){
   point1 = $('#canvas1_02').offset().top;
-  if ((this).scrollTop>point1) {
-    $('#menu-icon').fadeOut();
-  } else   {
-    $('#menu-icon').fadeIn();
+  point2 = $('#canvas1_03').offset().top;
+  if ((this).scrollTop>point1-100) {
+    console.log('point1');
+    $('#img1').fadeIn();
+  }
+  else{
+    $('#img1').fadeOut();
+  }
+  if ((this).scrollTop>(point2-100)) {
+      console.log('point2');
+    $('#img2').fadeIn();
+  }
+  else{
+    $('#img2').fadeOut();
   }
 });
+
 if( $('#title').css('font-size')=='30px') {
     var is_mobile = true;
 }
