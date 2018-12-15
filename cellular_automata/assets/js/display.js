@@ -2,12 +2,13 @@
 function toggleMenu(){
 	var menu = document.getElementById('menu');
 	if (menu.style.display === "none") {
-		menu.style.display = "block";
+		$('#menu').fadeIn();
         $('#menu-icon').addClass('active');						
 	} else {
-		menu.style.display = "none";
+		$('#menu').fadeOut();
         $('#menu-icon').removeClass('active');
 	}
+    $('.essay').removeClass('tempTransition');
 }
 
 
@@ -21,9 +22,7 @@ function readTextFile(file)
         {
             if(rawFile.status === 200 || rawFile.status == 0)
             {
-                rawFile.responseText;
-				var wrap = document.getElementById("essayWrapper");
-			    wrap.innerHTML = rawFile.responseText;           
+                rawFile.responseText;        
             }
         }
     }
@@ -46,8 +45,15 @@ $(document).ready (function() {
     });
 });
 function showEssay(number) {
+    tempZindex = 10;
+    tempTop = 10;
+    $('.essay').each(function(essay){
+        $(this).addClass('tempTransition');
+        $(this).css({'z-index': tempZindex, "left": "90%", "top": tempTop + "%"});
+        tempZindex += 1;
+        tempTop += 3;
+    })
     var selectEssay = "#essay" + number;
-    $(selectEssay).removeClass('hidden');
-    $(selectEssay).css('z-index', zindex);
+    $(selectEssay).css({'z-index': zindex, "left": "10%", "top": "10%"});
     zindex +=1;
 }
