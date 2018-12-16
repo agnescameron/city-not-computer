@@ -64,17 +64,17 @@ $(function() {
 
 });
 
-$('#essay0').scroll(function(){
-  point1 = $('#canvas1_02').offset().top;
-  point2 = $('#canvas1_03').offset().top;
-  if ((this).scrollTop>point1-100) {
+$(".essay").scroll(function(){
+  point1 = $(`#${this.id}_point01`).offset().top;
+  point2 = $(`#${this.id}_point02`).offset().top;
+  if ((this).scrollTop>point1-300 && (this).scrollTop<point1+300) {
     console.log('point1');
     $('#img1').fadeIn();
   }
   else{
     $('#img1').fadeOut();
   }
-  if ((this).scrollTop>(point2-100)) {
+   if ((this).scrollTop>point2-300 && (this).scrollTop<point2+300)  {
       console.log('point2');
     $('#img2').fadeIn();
   }
