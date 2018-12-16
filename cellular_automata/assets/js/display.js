@@ -29,20 +29,24 @@ function readTextFile(file)
     rawFile.send(null);
 }
 
-$(document).ready (function() {
-    $('.essay').each( function(index){
-        readTextFile(`assets/essays/${index}.html`);
-        essayNum = "essay" + index;
-        var x = document.getElementById(essayNum);
-        x.innerHTML = rawFile.responseText;
-        dragElement(document.getElementById(essayNum));
-        autoCanvas = '#' + essayNum + ' .autoCanvas';
-        $(autoCanvas).each( function(){
-            id = (this).id;
-            renderCanvas(id);
 
+
+$(document).ready(function() {
+    new Promise(function(resolve, reject) {
+    setTimeout(() => resolve(1), 250);
+        $('.essay').each( function(index){
+            readTextFile(`assets/essays/${index}.html`);
+            essayNum = "essay" + index;
+            var x = document.getElementById(essayNum);
+            x.innerHTML = rawFile.responseText;
+            dragElement(document.getElementById(essayNum));
+            autoCanvas = '#' + essayNum + ' .autoCanvas';
+            $(autoCanvas).each( function(){
+                id = (this).id;
+                renderCanvas(id);
+            });
         });
-    });
+    }).then(function (result, reject) {$(this).scrollTop(0);});
 });
 function showEssay(number) {
     tempZindex = 10;

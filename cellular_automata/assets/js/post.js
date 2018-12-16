@@ -102,3 +102,6 @@ if (is_mobile == true) {
       toggleMenu();
   }
 }
+$(document).ready(function(){
+    $(window).scrollTop('#title');
+})
