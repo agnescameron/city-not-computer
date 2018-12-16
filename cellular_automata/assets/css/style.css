@@ -181,6 +181,22 @@ float: left;
   overflow-y: scroll;
   position: absolute;
 }
+.essay::-webkit-scrollbar-track
+{
+  border: 1px solid #F1BA93;
+  background-color: rgba(0,0,0,0.0);
+}
+
+.essay::-webkit-scrollbar
+{
+  width: 10px;
+  background-color: rgba(0,0,0,0);
+}
+
+.essay::-webkit-scrollbar-thumb
+{
+  background-color: #F1BA93;  
+}
 .tempTransition {
   transition: 500ms all;
 }
