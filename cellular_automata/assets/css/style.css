@@ -66,7 +66,6 @@ color: #555;
   box-shadow: 2px 2px 2px darkgray;
 }
 .menu h2 {
-  cursor: grab;
   line-height: 1;
   color:black;
   font-family: 'Nunito', sans-serif;
@@ -79,6 +78,16 @@ color: #555;
 .menu h2:hover {
   background:#90c8f6;
 }
+.menu h2:nth-of-type(1) {cursor: help;}
+.menu h2:nth-of-type(2) {cursor: grab;}
+.menu h2:nth-of-type(3) {cursor: pointer;}
+.menu h2:nth-of-type(4) {cursor: ns-resize;}
+.menu h2:nth-of-type(5) {}
+.menu h2:nth-of-type(6) {}
+.menu h2:nth-of-type(7) {}
+.menu h2:nth-of-type(8) {cursor:cell;}
+.menu h2:nth-of-type(9) {}
+.menu h2:nth-of-type(10) {}
 #quotebox {
   width: 400px;
   margin-left: 40px;
