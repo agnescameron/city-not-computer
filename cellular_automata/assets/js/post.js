@@ -83,6 +83,14 @@ $(".essay").scroll(function(){
   }
 });
 
+$(".essay").mouseover(function(){
+  $('.essay').removeClass('tempTransition');
+});
+
+$("#menu").click(function(){
+  $('.essay').addClass('tempTransition');
+});
+
 if( $('#title').css('font-size')=='30px') {
     var is_mobile = true;
 }
