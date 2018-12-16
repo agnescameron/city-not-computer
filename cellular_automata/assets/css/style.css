@@ -31,7 +31,7 @@ color: #555;
   width: 40%;
   z-index: 2;
   border: 2px solid #F1BA93;
-  position: absolute;
+  position: relative;
   background-color: white;
   opacity: 80%;
   padding:0px 10% 20px 20px;
@@ -281,6 +281,13 @@ float: left;
   background-position: center;
 
 }
+.pointdiv{
+  width:400px;
+  position:absolute;
+  height: 10px;
+  background-color: red;
+}
+
 .bio_pic {
   width:50%;
   margin:0 auto;

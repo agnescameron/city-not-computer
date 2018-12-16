@@ -65,29 +65,30 @@ $(function() {
 });
 
 $(".essay").scroll(function(){
-  point0 = $(`#${this.id}_point00`).offset().top;
-  point1 = $(`#${this.id}_point01`).offset().top;
-  point2 = $(`#${this.id}_point02`).offset().top; 
-  point3 = $(`#${this.id}_point03`).offset().top;
-                   if ((this).scrollTop>(point0-700) && (this).scrollTop<(point0+700)) {
-                   $('#essayImage').css(`background-image`, `url(assets/img/${this.id}/0.png)`);
-                   $('#essayImage').fadeIn();
-                   }
-                   else if ((this).scrollTop>(point1-700) && (this).scrollTop<(point1+700)) {
-                   $('#essayImage').css(`background-image`, `url(assets/img/${this.id}/1.png)`);
-                   $('#essayImage').fadeIn();
-                   }
-                   else if ((this).scrollTop>(point2-700) && (this).scrollTop<(point2+700)) {
-                   $('#essayImage').css(`background-image`, `url(assets/img/${this.id}/2.png)`);
-                   $('#essayImage').fadeIn();
-                   }
-                   else if ((this).scrollTop>(point3-700) && (this).scrollTop<(point3+700)) {
-                   $('#essayImage').css(`background-image`, `url(assets/img/${this.id}/3.png)`);  
-                   $('#essayImage').fadeIn();
-                   }      
-                   else{
-                   $('#essayImage').fadeOut();
-                   }
+point0 = $(`#${this.id}_point00`).position().top;
+point1 = $(`#${this.id}_point01`).position().top;
+point2 = $(`#${this.id}_point02`).position().top;
+point3 = $(`#${this.id}_point03`).position().top;
+
+  if (point0>=-500 && point0<=500) {
+    $('#essayImage').css(`background-image`, `url(assets/img/${this.id}/0.png)`);
+    $('#essayImage').fadeIn();
+  }
+  else if (point1>=-500 && point1<=500)  {
+    $('#essayImage').css(`background-image`, `url(assets/img/${this.id}/1.png)`);
+    $('#essayImage').fadeIn();
+  }
+  else if (point2>=-500 && point2<=500) {
+    $('#essayImage').css(`background-image`, `url(assets/img/${this.id}/2.png)`);
+    $('#essayImage').fadeIn();
+  }
+  else if (point3>=-500 && point3<=500){ 
+  $('#essayImage').css(`background-image`, `url(assets/img/${this.id}/3.png)`);  
+  $('#essayImage').fadeIn();
+  }      
+  else{
+  $('#essayImage').fadeOut();
+  }
 });
 
 $(".essay").mouseover(function(){
