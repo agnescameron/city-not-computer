@@ -14,7 +14,7 @@ function renderCanvas(canvasID){
     
 	//functions
 	function tick() { //main loop
-	   var tickTime = 3000; // pause between iterations
+	   var tickTime = 10000; // pause between iterations
 	   drawGrid();
 	   updateGrid();
 	   setTimeout(function() {requestAnimationFrame(tick)}, tickTime);
@@ -124,7 +124,7 @@ function init(){
     
 	//functions
 	function tick() { //main loop
-	    var tickTime = 1500; // pause between iterations
+	    var tickTime = 10000; // pause between iterations
 	    drawGrid();
 	    updateGrid();
 	    setTimeout(function() {requestAnimationFrame(tick)}, tickTime);
@@ -148,7 +148,7 @@ function init(){
 
 	function drawGrid() { //draw the contents of the grid onto a canvas
     var liveCount = 0;
-    var blockSize = 10;
+    var blockSize = 20;
     ctx.fillStyle = "#F1BA93";
 	    ctx.clearRect(0, 0, gridHeight*blockSize, gridWidth*blockSize); //this should clear the canvas ahead of each redraw
 	    for (var j = 0; j < gridHeight; j++) { //iterate through rows

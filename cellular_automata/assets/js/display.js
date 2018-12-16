@@ -47,11 +47,13 @@ $(document).ready (function() {
 function showEssay(number) {
     tempZindex = 10;
     tempTop = 10;
+    tempLeft = 85;
     $('.essay').each(function(essay){
         $(this).addClass('tempTransition');
-        $(this).css({'z-index': tempZindex, "left": "90%", "top": tempTop + "%"});
+        $(this).css({'z-index': tempZindex, "left": tempLeft + "%", "top": tempTop + "%"});
         tempZindex += 1;
         tempTop += 3;
+        tempLeft += 1;
     })
     var selectEssay = "#essay" + number;
     $(selectEssay).css({'z-index': zindex, "left": "10%", "top": "10%"});
