@@ -248,6 +248,9 @@ float: left;
   top:10%;
   left:10%;
 }
+#diagram {
+  font: "Lucida Console", Monaco, monospace 10px;
+}
 .hideMe {
   position: absolute;
   top:5px;
