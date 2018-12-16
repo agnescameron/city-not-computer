@@ -67,6 +67,9 @@
         <div class="textwrapper essayWrapper">        
         </div>
       </div>
+<<<<<<< HEAD
+      <div id="essayImage"></div>
+=======
       <div id="essay6" class="essay textbox">
         <div class="textwrapper essayWrapper">        
         </div>
@@ -91,8 +94,10 @@
         <div class="textwrapper essayWrapper">        
         </div>
       </div>
-<div id="essayImage"></div>
-<div id = "canvas-container">
+      <div id="img1"></div>
+      <div id="img2"></div>
+>>>>>>> 1055f73fcfdb27f3b28ad9ac1d578b443b29fdb4
+     <div id = "canvas-container">
       <canvas id="canvas" width="1920" height="1080"></canvas>
       </div>
       </div>

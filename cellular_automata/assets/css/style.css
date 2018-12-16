@@ -4,6 +4,11 @@ body {
   font-size: 14px;
 color: #555;
   overflow-x:hidden;
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  overflow-x: hidden;
 }
 #mapbox {
   position: fixed;
@@ -30,34 +35,46 @@ color: #555;
   background-color: white;
   opacity: 80%;
   padding:0px 10% 20px 20px;
-  box-shadow:0px 0px 10px rgba(0,0,0,0.3);
+  box-shadow:2px 2px 5px rgba(0,0,0,0.3);
 }
 
 .menu {
   position: fixed;
-  height:100%;
-  width:100%;
   display:none;
   z-index: 500;
-  top:0;
-  right:0;
-  text-align: center;
-  background-color: rgba(241,186,147,0.9);
-  border:2px solid #F1BA93;
+  bottom:160px;
+  right:140px;
+  text-align: left;
+  background-color: #f2f2f2;
+  border:1px solid #cccccc;
   overflow-y: scroll;
+  padding:0px 5px;
+  overflow: hidden;
+  box-shadow: 2px 2px 2px darkgray;
 }
 .menu h2 {
-  cursor: grab;
-  line-height: 1.5;
-  color:white;
+  line-height: 1;
+  color:black;
   font-family: 'Nunito', sans-serif;
-  font-weight:bold;
-  margin:40px 0;
+  font-weight:300;
+  margin:5px 0;
+  text-overflow: wrap:;
+  font-size: 16px;
+  padding:10px 5px;
 }
-.menu h2 span {
-  font-size: 40px;
-  font-weight: bold;
+.menu h2:hover {
+  background:#90c8f6;
 }
+.menu h2:nth-of-type(1) {cursor: help;}
+.menu h2:nth-of-type(2) {cursor: grab;}
+.menu h2:nth-of-type(3) {cursor: pointer;}
+.menu h2:nth-of-type(4) {cursor: ns-resize;}
+.menu h2:nth-of-type(5) {}
+.menu h2:nth-of-type(6) {}
+.menu h2:nth-of-type(7) {}
+.menu h2:nth-of-type(8) {cursor:cell;}
+.menu h2:nth-of-type(9) {}
+.menu h2:nth-of-type(10) {}
 #quotebox {
   width: 400px;
   margin-left: 40px;
@@ -71,10 +88,16 @@ color: #555;
 
 /*headings in fatface*/
 h1 { font-family: 'Cormorant', serif; font-size: 44px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 44px; }
-document h1 { font-family: 'Cormorant', serif; font-size: 44px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 44px; text-transform:uppercase; color: #F1BA93;cursor: move;}  
+document h1 {transition:500ms all; font-family: 'Cormorant', serif; font-size: 44px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 44px; text-transform:uppercase; color: #F1BA93;cursor: move;}  
 h2 { font-family: 'Cormorant', serif; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 24px; } 
 h3 { font-family: 'Cormorant', serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 15px; } 
-
+.small_header {
+  position: fixed;
+  background-color: white;
+  font-size:24px;
+  color:black;
+  font-family: "Nunito", sans-serif;
+}
 /*paragraphs in source sans*/
 p { text-align:justify; font-family: 'Nunito', sans-serif; font-size: 20px; font-style: normal; font-variant: normal; font-weight: 300; line-height: 1.4; padding-bottom: 40px;} 
 .quote { width: 400px; float: right; text-align:right; font-family: 'Nunito', sans-serif; font-size: 20px; font-style: normal; font-variant: normal; font-weight: 300; line-height: 20px; padding-bottom: 40px; padding-left:200px;} 
@@ -154,32 +177,75 @@ float: left;
   overflow-y: scroll;
   position: absolute;
 }
+.essay::-webkit-scrollbar-track
+{
+  border: 1px solid #F1BA93;
+  background-color: rgba(0,0,0,0.0);
+}
+
+.essay::-webkit-scrollbar
+{
+  width: 10px;
+  background-color: rgba(0,0,0,0);
+}
+
+.essay::-webkit-scrollbar-thumb
+{
+  background-color: #F1BA93;  
+}
 .tempTransition {
   transition: 500ms all;
 }
 #essay0 {
   left:10%;
   top:10%;
+  z-index:20;
 }
 #essay1 {
   left:20%;
   top:20%;
+  z-index:19;
 }
 #essay2 {
   left:30%;
   top:30%;
+  z-index:18;
 }
 #essay3 {
   left:40%;
   top:40%;
+  z-index:17;
 }
 #essay4 {
   left:15%;
   top:50%;
+  z-index:16;
 }
 #essay5 {
   left:25%;
   top:60%;
+  z-index:15;
+}
+#essay6 {
+  left:35%;
+  top:70%;
+  z-index:14;
+}
+#essay7 {
+  left:45%;
+  top:80%;
+  z-index:13;
+}
+#essay9 h2 {
+  text-align: center;
+}
+#essay8, #essay9, #essay10, #essay11 {
+  z-index:1;
+  top:10%;
+  left:10%;
+}
+#diagram {
+  font: "Lucida Console", Monaco, monospace 10px;
 }
 .hideMe {
   position: absolute;
@@ -215,11 +281,19 @@ float: left;
   background-position: center;
 
 }
-
+.bio_pic {
+  width:50%;
+  margin:0 auto;
+  display: block;
+  border-radius:50%;
+}
 @media screen and (max-width:768px) {
   body {
     margin:0;
     padding:0;
+    width:100%;
+    height:auto;
+    overflow: visible;
   }
   #title {
     font-size:30px;
@@ -283,11 +357,11 @@ float: left;
     font-size:14px;
     line-height: 1;
     color:white;
-    margin:10px 20px;
+    margin:2px 20px;
+    padding:5px;
     text-align: center;
     font-family: 'Nunito';
     font-weight: 700;
-
   }
   #menu h2 span {
     font-size: 14px;
