@@ -7,8 +7,8 @@ color: #555;
   padding:0;
   margin:0;
   width:100%;
-  height:100%;
-  overflow: hidden;
+  height:auto;
+  overflow-x: hidden;
 }
 #mapbox {
   position: fixed;
@@ -48,7 +48,7 @@ color: #555;
   background-color: white;
   opacity: 80%;
   padding:0px 10% 20px 20px;
-  box-shadow:0px 0px 10px rgba(0,0,0,0.3);
+  box-shadow:2px 2px 5px rgba(0,0,0,0.3);
 }
 
 .menu {
@@ -63,7 +63,7 @@ color: #555;
   overflow-y: scroll;
   padding:0px 5px;
   overflow: hidden;
-  box-shadow: 2px 2px 2px black;
+  box-shadow: 2px 2px 2px darkgray;
 }
 .menu h2 {
   cursor: grab;
@@ -92,10 +92,16 @@ color: #555;
 
 /*headings in fatface*/
 h1 { font-family: 'Cormorant', serif; font-size: 44px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 44px; }
-document h1 { font-family: 'Cormorant', serif; font-size: 44px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 44px; text-transform:uppercase; color: #F1BA93;cursor: move;}  
+document h1 {transition:500ms all; font-family: 'Cormorant', serif; font-size: 44px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 44px; text-transform:uppercase; color: #F1BA93;cursor: move;}  
 h2 { font-family: 'Cormorant', serif; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 24px; } 
 h3 { font-family: 'Cormorant', serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 15px; } 
-
+.small_header {
+  position: fixed;
+  background-color: white;
+  font-size:24px;
+  color:black;
+  font-family: "Nunito", sans-serif;
+}
 /*paragraphs in source sans*/
 p { text-align:justify; font-family: 'Nunito', sans-serif; font-size: 20px; font-style: normal; font-variant: normal; font-weight: 300; line-height: 1.4; padding-bottom: 40px;} 
 .quote { width: 400px; float: right; text-align:right; font-family: 'Nunito', sans-serif; font-size: 20px; font-style: normal; font-variant: normal; font-weight: 300; line-height: 20px; padding-bottom: 40px; padding-left:200px;} 
@@ -202,6 +208,22 @@ float: left;
   left:25%;
   top:60%;
 }
+#essay6 {
+  left:35%;
+  top:70%;
+}
+#essay7 {
+  left:45%;
+  top:80%;
+}
+#essay9 h2 {
+  text-align: center;
+}
+#essay8, #essay9, #essay10 {
+  z-index:1;
+  top:10%;
+  left:10%;
+}
 .hideMe {
   position: absolute;
   top:5px;
@@ -243,11 +265,19 @@ float: left;
   float: right;
     right: 5%;
 }
-
+.bio_pic {
+  width:50%;
+  margin:0 auto;
+  display: block;
+  border-radius:50%;
+}
 @media screen and (max-width:768px) {
   body {
     margin:0;
     padding:0;
+    width:100%;
+    height:auto;
+    overflow: visible;
   }
   #title {
     font-size:30px;
@@ -311,11 +341,11 @@ float: left;
     font-size:14px;
     line-height: 1;
     color:white;
-    margin:10px 20px;
+    margin:2px 20px;
+    padding:5px;
     text-align: center;
     font-family: 'Nunito';
     font-weight: 700;
-
   }
   #menu h2 span {
     font-size: 14px;

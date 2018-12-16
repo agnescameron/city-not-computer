@@ -55,5 +55,6 @@ function showEssay(number) {
     })
     var selectEssay = "#essay" + number;
     $(selectEssay).css({'z-index': zindex, "left": "10%", "top": "10%"});
+    $(selectEssay).scrollTop(document);
     zindex +=1;
 }

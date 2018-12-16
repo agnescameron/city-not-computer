@@ -66,7 +66,7 @@ $(function() {
 
 $(".essay").scroll(function(){
   point1 = $(`#${this.id}_point01`).offset().top;
-  point2 = $(`#${this.id}_point02`).offset().top;
+  point2 = $(`#${this.id}_point02`).offset().top; 
   if ((this).scrollTop>point1-300 && (this).scrollTop<point1+300) {
     console.log('point1');
     $('#img1').fadeIn();
