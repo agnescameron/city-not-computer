@@ -65,22 +65,29 @@ $(function() {
 });
 
 $(".essay").scroll(function(){
+  point0 = $(`#${this.id}_point00`).offset().top;
   point1 = $(`#${this.id}_point01`).offset().top;
   point2 = $(`#${this.id}_point02`).offset().top;
-  if ((this).scrollTop>point1-300 && (this).scrollTop<point1+300) {
-    console.log('point1');
-    $('#img1').fadeIn();
-  }
-  else{
-    $('#img1').fadeOut();
-  }
-   if ((this).scrollTop>point2-300 && (this).scrollTop<point2+300)  {
-      console.log('point2');
-    $('#img2').fadeIn();
-  }
-  else{
-    $('#img2').fadeOut();
-  }
+  point3 = $(`#${this.id}_point03`).offset().top;
+    if ((this).scrollTop>(point0-700) && (this).scrollTop<(point0+700)) {
+      $('#essayImage').css(`background-image`, `url(assets/img/${this.id}/0.png)`);  
+      $('#essayImage').fadeIn();
+    }
+    else if ((this).scrollTop>(point1-700) && (this).scrollTop<(point1+700)) {
+      $('#essayImage').css(`background-image`, `url(assets/img/${this.id}/1.png)`);  
+      $('#essayImage').fadeIn();
+    }
+    else if ((this).scrollTop>(point2-700) && (this).scrollTop<(point2+700)) {
+      $('#essayImage').css(`background-image`, `url(assets/img/${this.id}/2.png)`);  
+      $('#essayImage').fadeIn();
+    }  
+    else if ((this).scrollTop>(point3-700) && (this).scrollTop<(point3+700)) {
+      $('#essayImage').css(`background-image`, `url(assets/img/${this.id}/3.png)`);  
+      $('#essayImage').fadeIn();
+    }      
+    else{
+      $('#essayImage').fadeOut();
+    }
 });
 
 if( $('#title').css('font-size')=='30px') {
