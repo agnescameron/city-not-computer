@@ -113,3 +113,6 @@ if (is_mobile == true) {
 $(document).ready(function(){
     $(window).scrollTop('#title');
 })
+$(document).mousemove(function(event){
+  $('#menu-icon').css("transform",`translate(${( 1 - ( event.pageX / pageWidth ) ) * 20}%,${( 1 - ( event.pageY / pageHeight ) ) * 20}%`);
+});

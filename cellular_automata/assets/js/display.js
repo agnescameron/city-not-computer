@@ -47,6 +47,8 @@ $(document).ready(function() {
             });
         });
     }).then(function (result, reject) {$(this).scrollTop(0);});
+    pageWidth = $(window).width();
+    pageHeight =  $(window).height();
 });
 function showEssay(number) {
     tempZindex = 10;
